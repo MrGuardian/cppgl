@@ -3,4 +3,6 @@
 *.suo
 *.vsp
 Debug/
+Release/
 CGL/Debug/
+CGL/Release/

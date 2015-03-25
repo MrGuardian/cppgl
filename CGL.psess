@@ -71,6 +71,15 @@
     <Report>
       <Path>CGL150312.vsp</Path>
     </Report>
+    <Report>
+      <Path>CGL150313.vsp</Path>
+    </Report>
+    <Report>
+      <Path>CGL150315.vspx</Path>
+    </Report>
+    <Report>
+      <Path>CGL150315(1).vspx</Path>
+    </Report>
   </Reports>
   <Launches>
     <ProjBinary>

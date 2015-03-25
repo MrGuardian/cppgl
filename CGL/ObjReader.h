@@ -4,13 +4,19 @@
 #include <fstream>
 #include <vector>
 #include <sstream>
-#include "Vertex.h"
+#include "Vectors.h"
 using std::string;
 using std::vector;
 
-namespace CGL {
+namespace CppGL {
 	struct Face {
-		Vertex vertices[3];
+		vector<Vec3d> vertices;
+		Face() { vertices = vector<Vec3d>(3); }
+		Face(const vector<Vec3d> &vertices) {
+			if (vertices.size() >= 3) {
+				this->vertices = vector<Vec3d>(vertices.begin(), vertices.begin() + 3);
+			}
+		}
 	};
 
 	class ObjReader {
@@ -22,7 +28,7 @@ namespace CGL {
 			while (std::getline(file, line)) {
 				auto words = split(line, ' ');
 				if (words.size() > 0 && words[0] == "v") {
-					Vertex vertex;
+					Vec3d vertex;
 					vertex.x = std::atof(words[1].data());
 					vertex.y = std::atof(words[2].data());
 					vertex.z = std::atof(words[3].data());
@@ -42,11 +48,11 @@ namespace CGL {
 			file.close();
 		}
 
-		const vector<Vertex>& vertices() const { return _vertices; }
+		const vector<Vec3d>& vertices() const { return _vertices; }
 		const vector<Face>& faces() const { return _faces; }
 
 	private:
-		vector<Vertex> _vertices;
+		vector<Vec3d> _vertices;
 		vector<Face> _faces;
 
 		vector<string> split(const string &s, const char delim) {

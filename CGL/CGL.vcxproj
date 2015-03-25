@@ -81,9 +81,16 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Bitmap.h" />
+    <ClInclude Include="Color.h" />
+    <ClInclude Include="Float2.h" />
+    <ClInclude Include="Line.h" />
+    <ClInclude Include="LineData.h" />
     <ClInclude Include="ObjReader.h" />
     <ClInclude Include="stb_image_write.h" />
-    <ClInclude Include="Vertex.h" />
+    <ClInclude Include="Utils.h" />
+    <ClInclude Include="Vectors.h" />
+    <ClInclude Include="ZBuffer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
