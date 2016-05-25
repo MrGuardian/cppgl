@@ -2,6 +2,8 @@
 *.sdf
 *.suo
 *.vsp
+*.vspx
+*.psess
 Debug/
 Release/
 CGL/Debug/
